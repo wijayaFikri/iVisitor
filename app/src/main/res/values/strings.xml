@@ -13,4 +13,6 @@
     <string name="dashboard_notification">NOTIFICATION</string>
     <string name="dashboard_appointment">APPOINTMENT</string>
     <string name="dashboard_edit_profile">EDIT PROFILE</string>
+    <string name="dashboard__menu_logout">LOGOUT</string>
+    <string name="dashboard_history">HISTORY</string>
 </resources>

@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     
-    <style name="dasboard_menu_text">
+    <style name="dashboard_menu_text">
         <item name="android:fontFamily">@font/dense_regular</item>
         <item name="android:textScaleX">1.5</item>
         <item name="android:textStyle">bold</item>

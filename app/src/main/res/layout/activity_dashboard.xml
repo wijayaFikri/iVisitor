@@ -62,11 +62,11 @@
             android:orientation="vertical">
             <androidx.appcompat.widget.AppCompatImageView
                 style="@style/dashboard_menu_image"
-                android:src="@drawable/ic_date_range_96dp">
+                android:src="@drawable/ic_message_96dp">
             </androidx.appcompat.widget.AppCompatImageView>
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/dasboard_menu_text"
-                android:text="@string/dashboard_calendar"/>
+                style="@style/dashboard_menu_text"
+                android:text="@string/dashboard_notification"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -86,11 +86,11 @@
         <LinearLayout style="@style/dashboard_menu_item">
             <androidx.appcompat.widget.AppCompatImageView
                 style="@style/dashboard_menu_image"
-                android:src="@drawable/ic_message_96dp">
+                android:src="@drawable/ic_event_note_96dp">
             </androidx.appcompat.widget.AppCompatImageView>
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/dasboard_menu_text"
-                android:text="@string/dashboard_notification"/>
+                style="@style/dashboard_menu_text"
+                android:text="@string/dashboard_history"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -109,11 +109,11 @@
         <LinearLayout style="@style/dashboard_menu_item">
             <androidx.appcompat.widget.AppCompatImageView
                 style="@style/dashboard_menu_image"
-                android:src="@drawable/ic_event_note_96dp">
+                android:src="@drawable/ic_mode_96dp">
             </androidx.appcompat.widget.AppCompatImageView>
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/dasboard_menu_text"
-                android:text="@string/dashboard_appointment"/>
+                style="@style/dashboard_menu_text"
+                android:text="@string/dashboard_edit_profile"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -132,11 +132,11 @@
         <LinearLayout style="@style/dashboard_menu_item">
             <androidx.appcompat.widget.AppCompatImageView
                 style="@style/dashboard_menu_image"
-                android:src="@drawable/ic_mode_96dp">
+                android:src="@drawable/ic_exit_96dp">
             </androidx.appcompat.widget.AppCompatImageView>
             <androidx.appcompat.widget.AppCompatTextView
-                style="@style/dasboard_menu_text"
-                android:text="@string/dashboard_edit_profile"/>
+                style="@style/dashboard_menu_text"
+                android:text="@string/dashboard__menu_logout"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

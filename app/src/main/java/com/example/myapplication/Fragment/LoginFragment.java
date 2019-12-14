@@ -19,9 +19,9 @@ import com.example.myapplication.R;
 import com.example.myapplication.dashboardActivity;
 
 
-public class Login extends BaseFragment {
+public class LoginFragment extends BaseFragment {
 
-    public Login() {
+    public LoginFragment() {
         // Required empty public constructor
     }
 
@@ -43,13 +43,6 @@ public class Login extends BaseFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        TextView tv = getActivity().findViewById(R.id.Login_click_to_register);
-        tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            nextFragment(new Register(),R.id.Auth_container);
-            }
-        });
 
         Button login_button = getActivity().findViewById(R.id.login_button);
         login_button.setOnClickListener(new View.OnClickListener() {
