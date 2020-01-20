@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".visitorComingActivity">
+    tools:context=".VisitorComingActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat"
@@ -20,15 +20,24 @@
         app:layout_constraintVertical_bias="0">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/visitor_ktp_container"
             android:layout_width="200dp"
             android:layout_height="120dp"
             app:cardCornerRadius="16dp"
-            app:cardElevation="1dp"/>
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="1dp">
+            <ImageView
+                android:id="@+id/visitor_ktp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+        </androidx.cardview.widget.CardView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/acceptButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/visitor_detail_accept_button"
@@ -44,7 +53,7 @@
         app:layout_constraintWidth_percent="0.35" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton2"
+        android:id="@+id/declineButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/visitor_detail_decline_button"
@@ -97,6 +106,7 @@
                     android:text="Full name" />
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/visitor_full_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -121,6 +131,7 @@
                     android:layout_marginTop="8dp"
                     android:text="Meeting purpose"/>
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/visitor_meeting_purpose"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

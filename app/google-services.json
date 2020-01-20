@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "914199712730",
+    "firebase_url": "https://ivisitor-c608c.firebaseio.com",
+    "project_id": "ivisitor-c608c",
+    "storage_bucket": "ivisitor-c608c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914199712730:android:4b4f9bc64dd0962fc226e3",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914199712730-2pq9bo5t3edgfp61m6k2vcepk0fm686v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "37a60f7857baf9172112092c604df44c6cc7472e"
+          }
+        },
+        {
+          "client_id": "914199712730-0723r5j7mbo923ff2k1qbepmdi40i90b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyxsSUobbcXXGn0-IfIdep5TjE4apsC6c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914199712730-0723r5j7mbo923ff2k1qbepmdi40i90b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,7 +6,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class SharedPrefUtils {
-    public static final String mypreference = "mypref";
     private SharedPreferences sharedPreferences;
 
     public SharedPrefUtils(SharedPreferences sharedPreferences) {

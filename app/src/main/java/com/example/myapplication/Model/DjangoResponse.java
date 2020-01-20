@@ -1,6 +1,4 @@
-package com.example.myapplication.model;
-
-import java.util.Map;
+package com.example.myapplication.Model;
 
 public class DjangoResponse {
     private String model;

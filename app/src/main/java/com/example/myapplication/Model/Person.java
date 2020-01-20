@@ -1,10 +1,11 @@
-package com.example.myapplication.model;
+package com.example.myapplication.Model;
 
 import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
 public class Person {
+    private String id;
     @SerializedName("first_name")
     private String firstName;
     @SerializedName("last_name")
@@ -14,6 +15,14 @@ public class Person {
     private String address;
     @SerializedName("office_desk_location")
     private String officeDeskLocation;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
