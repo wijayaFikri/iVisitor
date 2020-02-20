@@ -12,6 +12,7 @@ import com.example.myapplication.Model.Person;
 import com.example.myapplication.Model.Visitor;
 import com.example.myapplication.Retrofit.interfaces.GetHistory;
 import com.example.myapplication.Retrofit.interfaces.Login;
+import com.example.myapplication.Retrofit.interfaces.NewProfile;
 import com.example.myapplication.Retrofit.interfaces.Result;
 import com.example.myapplication.config.Config;
 import com.example.myapplication.service.MyFirebaseInstanceService;
@@ -154,6 +155,37 @@ public class MyRetrofit {
             @Override
             public void onFailure(@NonNull Call<List<Visitor>> call,@NonNull Throwable t) {
                 getHistory.onFailed("getting history failed , please check your internet connection");
+            }
+        });
+    }
+
+    public void sendNewProfile(final Person person, final NewProfile newProfile){
+        PersonService personService = retrofit.create(PersonService.class);
+        /*String personJson = new Gson().toJson(person);
+        Log.d("INI JSON NYAAAAAAA" , personJson);*/
+        Call<ApiResponse> apiResponseCall = personService.sendNewProfile(person);
+        apiResponseCall.enqueue(new Callback<ApiResponse>() {
+            @Override
+            public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                if (response.isSuccessful()){
+                    ApiResponse apiResponse = response.body();
+                    if (apiResponse.getStatus().equals("Success")){
+                        Log.d("RETROFIT RESULT" , "Success");
+                        newProfile.onSuccess(person);
+                    } else {
+                        newProfile.onFailed("An error occured during saving the profile , " +
+                                "Please try again");
+                    }
+                } else {
+                    newProfile.onFailed("An error occured during saving the profile , " +
+                            "Please try again");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ApiResponse> call, Throwable t) {
+                        newProfile.onFailed("Saving profile failed , Please check your internet" +
+                                "connection");
             }
         });
     }

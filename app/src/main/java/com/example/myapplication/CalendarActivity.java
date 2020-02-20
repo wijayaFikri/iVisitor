@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CalendarView;
 import android.widget.Toast;
 
@@ -38,5 +39,11 @@ public class CalendarActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void goHome(View view) {
+        Intent intent = new Intent(this,DashboardActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

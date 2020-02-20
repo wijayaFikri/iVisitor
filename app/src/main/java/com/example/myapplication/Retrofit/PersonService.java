@@ -2,11 +2,13 @@ package com.example.myapplication.Retrofit;
 
 import com.example.myapplication.Model.ApiResponse;
 import com.example.myapplication.Model.DjangoResponse;
+import com.example.myapplication.Model.Person;
 import com.example.myapplication.Model.Visitor;
 
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -31,4 +33,7 @@ public interface PersonService {
     @POST("/History")
     Call<List<Visitor>> getHistory(@Field("target") String primaryKey,
                                    @Field("target_date") String date);
+
+    @POST("/Edit/Profile")
+    Call<ApiResponse> sendNewProfile (@Body Person person);
 }

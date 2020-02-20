@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
                     String personJson = new Gson().toJson(person);
                     if (sharedPrefUtils.save(USER_KEY, personJson)) {
                         Intent intent = new Intent(context, DashboardActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(intent);
                     }
                 }

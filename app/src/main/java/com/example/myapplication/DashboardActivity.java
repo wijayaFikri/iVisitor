@@ -36,4 +36,9 @@ public class DashboardActivity extends AppCompatActivity {
         Intent intent = new Intent(this,CalendarActivity.class);
         startActivity(intent);
     }
+
+    public void goEditProfile(View view) {
+        Intent intent = new Intent(this,EditProfileActivity.class);
+        startActivity(intent);
+    }
 }

@@ -4,100 +4,116 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/edit_profile_backgound"
+    android:background="@drawable/edit_profile_background"
     tools:context=".EditProfileActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardElevation="0.5dp"
         app:cardCornerRadius="16dp"
-        app:layout_constraintHeight_percent="0.8"
-        app:layout_constraintWidth_percent="0.8"
+        app:cardElevation="0.5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.8">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="64dp">
+            android:scrollbarSize="0dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/edit_profile_firstname"/>
-
-            <androidx.appcompat.widget.AppCompatEditText
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textSize="32sp"
-                android:background="@drawable/edit_profile_form_background"/>
+                android:orientation="vertical"
+                android:paddingBottom="32dp"
+                android:paddingTop="64dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Lastname"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/edit_profile_firstname" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textSize="32sp"
-                android:background="@drawable/edit_profile_form_background"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_profile_firstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_form_background"
+                    android:padding="16dp"
+                    android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Position"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Lastname" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textSize="32sp"
-                android:background="@drawable/edit_profile_form_background"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_profile_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_form_background"
+                    android:padding="16dp"
+                    android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Office Desk Location"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Position" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:textSize="32sp"
-                android:background="@drawable/edit_profile_form_background"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_profile_position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_form_background"
+                    android:padding="16dp"
+                    android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/visitor_detail_accept_button"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="64dp"
-                android:text="SUBMIT"
-                android:textColor="#ffffff"
-                android:elevation="1dp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Office Desk Location" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edit_profile_office_desk_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edit_profile_form_background"
+                    android:padding="16dp"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/edit_profile_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/visitor_detail_accept_button"
+                    android:elevation="1dp"
+                    android:text="SUBMIT"
+                    android:textColor="#ffffff" />
 
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
 
     </androidx.cardview.widget.CardView>
 
