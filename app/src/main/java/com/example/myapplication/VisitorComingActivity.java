@@ -97,6 +97,7 @@ public class VisitorComingActivity extends AppCompatActivity {
 
     public void sendResponse(int response,String primaryKey){
         final Context context = this;
+        final int finalResponse = response;
         final SharedPreferences sharedPreferences = getSharedPreferences(Config.PREFERENCE_KEY,MODE_PRIVATE);
         MyRetrofit myRetrofit = new MyRetrofit(sharedPreferences);
         myRetrofit.sendResponse(response, primaryKey, new Result() {
@@ -104,13 +105,19 @@ public class VisitorComingActivity extends AppCompatActivity {
             public void onSuccess(String message) {
                 Toast.makeText(context, message,
                         Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(context,VisitorSessionActivity.class);
-                SharedPrefUtils sharedPrefUtils = new SharedPrefUtils(sharedPreferences);
-                sharedPrefUtils.save(Config.SESSION_KEY,"1");
-                Calendar calendar = Calendar.getInstance();
-                sharedPrefUtils.save(Config.CLOCK_IN_KEY,String.valueOf(calendar.getTimeInMillis()));
-                startActivity(intent);
-                finish();
+                if (finalResponse == 1) {
+                    Intent intent = new Intent(context, VisitorSessionActivity.class);
+                    SharedPrefUtils sharedPrefUtils = new SharedPrefUtils(sharedPreferences);
+                    sharedPrefUtils.save(Config.SESSION_KEY, "1");
+                    Calendar calendar = Calendar.getInstance();
+                    sharedPrefUtils.save(Config.CLOCK_IN_KEY, String.valueOf(calendar.getTimeInMillis()));
+                    startActivity(intent);
+                    finish();
+                } else {
+                    Intent intent = new Intent(context,DashboardActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
 
             @Override

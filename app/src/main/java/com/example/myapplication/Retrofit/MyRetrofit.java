@@ -88,6 +88,7 @@ public class MyRetrofit {
 
     public void sendResponse(int response, String primaryKey, final Result result) {
         PersonService personService = retrofit.create(PersonService.class);
+        final int finalResponse = response;
         Call<ApiResponse> djangoResponseCall = personService.sendResponse(response, primaryKey);
         djangoResponseCall.enqueue(new Callback<ApiResponse>() {
             @Override
@@ -95,7 +96,11 @@ public class MyRetrofit {
                 try {
                     ApiResponse apiResponse = response.body();
                     if (apiResponse.getStatus().equals("Success")){
-                        result.onSuccess("Visitor has been accepted successfully");
+                        if (finalResponse == 1) {
+                            result.onSuccess("Visitor has been accepted successfully");
+                        } else {
+                            result.onSuccess("Visitor has been rejected successfully");
+                        }
                     }
                 } catch (Exception e){
                     String errorMessage = e.getMessage();
