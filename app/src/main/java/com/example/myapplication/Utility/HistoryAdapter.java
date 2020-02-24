@@ -57,7 +57,12 @@ public class HistoryAdapter extends ArrayAdapter<Visitor> {
         visitorNameTv.setText(visitor.getVisitorName());
         visitorReasonTv.setText(visitor.getVisitingReason());
         visitorDateTv.setText(visitor.getVisitDate());
-        visitorIsAcceptedTv.setText(visitor.getIsAccepted());
+        if (visitor.getIsAccepted().equals("false")){
+            visitorIsAcceptedTv.setText("Rejected");
+        } else {
+            visitorIsAcceptedTv.setText("Accepted");
+        }
+
         if (visitor.getClockIn() != null && visitor.getClockOut() != null){
             String sessionDuration = visitor.getClockIn().substring(0, 5)
                     + " - "

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#fff">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"/>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="0dp"
+    android:layout_weight="0.4"
+    android:src="@drawable/ic_no_order">
+</ImageView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.05"/>
+    <TextView
+        android:id="@+id/no_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:textSize="32sp"
+        android:textColor="#000"
+        android:alpha="0.5"
+        android:layout_gravity="center"
+        android:text="No new visitor coming."/>
+
+</LinearLayout>

@@ -32,8 +32,6 @@ public class CalendarActivity extends AppCompatActivity {
                         + String.valueOf(dayOfMonth)
                         + " "
                         +  String.valueOf(year);
-                Toast.makeText(context, date,
-                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(context,HistoryActivity.class);
                 intent.putExtra(Config.DATE_STRING, date);
                 startActivity(intent);

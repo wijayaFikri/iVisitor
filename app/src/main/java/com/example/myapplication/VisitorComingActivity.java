@@ -42,6 +42,7 @@ public class VisitorComingActivity extends AppCompatActivity {
         }
         String notificationDataJson = sharedPrefUtils.get(Config.NOTIFICATION_KEY);
         if (notificationDataJson != null && !"".equals(notificationDataJson)){
+            setContentView(R.layout.activity_visitor_coming);
             final NotificationData notificationData = new Gson().fromJson(notificationDataJson,NotificationData.class);
             final Target target = new Target() {
                 @Override
@@ -92,6 +93,8 @@ public class VisitorComingActivity extends AppCompatActivity {
                     sendResponse(0,notificationData.getVisitorId());
                 }
             });
+        } else {
+            setContentView(R.layout.no_visitor_coming_activity);
         }
     }
 
@@ -114,6 +117,8 @@ public class VisitorComingActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 } else {
+                    SharedPrefUtils sharedPrefUtils = new SharedPrefUtils(sharedPreferences);
+                    sharedPrefUtils.remove(Config.NOTIFICATION_KEY);
                     Intent intent = new Intent(context,DashboardActivity.class);
                     startActivity(intent);
                     finish();
